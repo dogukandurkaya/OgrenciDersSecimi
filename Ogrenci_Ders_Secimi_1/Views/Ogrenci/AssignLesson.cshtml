@@ -1,0 +1,38 @@
+﻿@model List<Ogrenci>
+<h5 class="display-4">Assign Lesson</h5>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-sm table-bordered">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>No</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Period</td>
+                    <td>Department</td>
+                    <td>Assigned Lessons</td>
+                    <td>Assign Lesson</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+    <tr>
+        <td>@item.OgrenciId</td>
+        <td>@item.OgrenciNo</td>
+        <td>@item.OgrenciAd</td>
+        <td>@item.OgrenciSoyAd</td>
+        <td>@item.OgrenciDonemi</td>
+        @*<td>@item.Bolum</td>*@
+        <td></td>
+        <td>
+            <a asp-controller="Ogrenci" asp-action="Assign" asp-route-id="@item.OgrenciId" class="btn btn-sm btn-primary">Assign Lesson</a>
+        </td>
+    </tr>}
+            </tbody>
+        </table>
+    </div>
+
+</div>

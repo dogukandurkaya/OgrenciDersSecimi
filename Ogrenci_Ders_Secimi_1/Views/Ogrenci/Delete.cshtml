@@ -1,0 +1,28 @@
+﻿@model Ogrenci
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="display-3 bg-dark text-light">Öğrenci Sil</h1>
+
+<div class="bg-dark text-light">
+    <h4>Öğrenci</h4>
+    <h5>Öğrenci ID: </h5>
+    <p>@Model.OgrenciId</p>
+    <h5>Öğrenci Ad</h5>
+    <p>@Model.OgrenciAd</p>
+    <h5>Öğrenci Soyad</h5>
+    <p>@Model.OgrenciSoyAd</p>
+    <h5>Öğrenci Dönemi</h5>
+    <p>@Model.OgrenciDonemi</p>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="OgrenciId">
+    <input type="submit" value="Öğrenci Sil" class="btn btn-danger">
+</form>
+
+
+<a asp-action="Index">Öğrenci Sayfasına Dön</a>
+

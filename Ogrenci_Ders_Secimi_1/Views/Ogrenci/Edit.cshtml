@@ -1,0 +1,37 @@
+﻿@model Ogrenci
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="bg-dark text-light">Öğrenci Düzenle</h1>
+
+<div class="row bg-dark text-light">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div class="form-group">
+                <label class="control-label">Öğrenci Id</label><br>
+                <input class="form-control" asp-for="OgrenciId"><br>
+                <input type="hidden" asp-for="OgrenciId">
+                <label class="control-label">Öğrenci No</label>
+                <input class="form-control" type="text" asp-for="OgrenciNo">
+                <label class="control-label">Öğrenci Ad</label>
+                <input class="form-control" type="text" asp-for="OgrenciAd">
+                <label class="control-label">Öğrenci Soyad</label>
+                <input class="form-control" type="text" asp-for="OgrenciSoyAd">
+                <label class="control-label">Öğrenci Doğum Tarihi</label>
+                <input class="form-control" type="text" asp-for="OgrenciDogumTarihi">
+                <label class="control-label">Öğrenci Kayıt Tarihi</label>
+                <input class="form-control" type="text" asp-for="OgrenciKayitTarihi">
+                <label class="control-label">Öğrenci Dönemi</label>
+                <input class="form-control" type="text" asp-for="OgrenciDonemi">
+                <label class="control-label">Öğrenci Bölümü</label>
+                <select class="form-control" type="text" asp-for="BolumId" asp-items="@ViewBag.Bolum"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Değişiklikleri Kaydet" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</div>
+
+<a asp-action="Index">Kitaplar Sayfasına Dön</a>

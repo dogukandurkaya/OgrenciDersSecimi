@@ -1,0 +1,24 @@
+﻿@model Ogrenci
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="bg-dark text-light">Öğrenci Detayları</h1>
+
+<div class="bg-dark text-light">
+    <h4>Öğrenci</h4>
+    <h5>Öğrenci ID: </h5>
+    <p class="text-light">@Model.OgrenciId</p>
+    <h5>Öğrenci Ad</h5>
+    <p class="text-light">@Model.OgrenciAd</p>
+    <h5>Öğrenci Soyad</h5>
+    <p class="text-light">@Model.OgrenciSoyAd</p>
+    <h5>Öğrenci Doğum Tarihi</h5>
+    <p class="text-light">@Model.OgrenciDogumTarihi</p>
+    <h5>Öğrenci Kayıt Tarihi</h5>
+    <p class="text-light">@Model.OgrenciKayitTarihi</p>
+    <h5>Öğrenci Dönemi</h5>
+    <p class="text-light">@Model.OgrenciDonemi</p>
+</div>
+
+<a asp-action="Index">Öğrenci Sayfasına Dön</a>
